@@ -14,16 +14,16 @@ import java.util.List;
 
 @RestController
 public class UserController {
-  /*  private UserService userService;
+    private UserService userService;
     UserController (UserService userService){
      this.userService=userService;
-    }*/
+    }
     @GetMapping("/test")
     public ResponseEntity<?> test() {
         return new ResponseEntity("Hello world!", HttpStatus.OK);
     }
 
-    /*@GetMapping("/allusers")
+    @GetMapping("/allusers")
     public  ResponseEntity<?> getAllUsers(){
        List<User> userList= userService.getAllUser();
        ResponseEntity<?> responseEntity= new ResponseEntity<>(userList,HttpStatus.OK);
@@ -41,6 +41,5 @@ public class UserController {
        User userList= userService.findById(id);
        ResponseEntity<?> responseEntity= new ResponseEntity<>(userList,HttpStatus.OK);
        return responseEntity;
-    }*/
-
+  }
 }
